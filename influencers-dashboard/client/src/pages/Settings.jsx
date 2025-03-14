@@ -17,7 +17,7 @@ import { errorService } from '@/lib/errorMessages';
 import ApiErrorAlert from '@/components/ui/ApiErrorAlert';
 
 // Importação de estilos
-import '@/styles/pages/settings.css';
+import '@/styles/pages/Settings.css';
 
 const Settings = React.forwardRef(({ className = '', ...props }, ref) => {
   const { theme, toggleTheme } = useTheme();
