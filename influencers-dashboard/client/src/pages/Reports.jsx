@@ -14,7 +14,7 @@ import useTranslation from '@/hooks/useTranslation';
 import useApiCall from '@/hooks/useApiCall';
 import ApiErrorAlert from '@/components/ui/ApiErrorAlert';
 import ErrorBoundary from '@/components/ui/ErrorBoundary';
-import { useToast } from '@/components/ui/toast';
+import { useToast } from '@/components/ui/Toast';
 
 // Imagens para estados de erro e perfil padrão
 import errorImage from '@/assets/error_404.png';
