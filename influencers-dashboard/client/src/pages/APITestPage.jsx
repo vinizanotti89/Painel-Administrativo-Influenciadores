@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // Serviços de API
 import InstagramAuthTest from '@/components/instagram/InstagramAuthTest';
-import LinkedInAuthTest from '@/components/linkedin/LinkedInAuthTest';
+import LinkedInAuthTest from '@/components/linkedin/LinkedinAuthTest';
 import YouTubeAuthTest from '@/components/youtube/YouTubeAuthTest';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Card } from '@/components/ui/card';
