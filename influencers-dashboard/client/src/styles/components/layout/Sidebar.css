@@ -1,0 +1,90 @@
+@import '@/styles/themes.css';
+
+.sidebar {
+  width: 240px;
+  min-height: calc(100vh - 64px);
+  background-color: var(--background-secondary);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-nav {
+  padding: 1rem;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.925rem;
+  position: relative;
+}
+
+.menu-item:hover {
+  background-color: var(--hover-background);
+  transform: translateX(4px);
+}
+
+.menu-item.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.menu-item-text {
+  flex: 1;
+}
+
+.notification-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 6px;
+}
+
+.menu-item.active .notification-badge {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .sidebar {
+  background-color: var(--background-secondary);
+}
+
+[data-theme="dark"] .menu-item {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .menu-item:hover {
+  background-color: var(--hover-background);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .menu-item.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

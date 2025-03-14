@@ -1,0 +1,41 @@
+@import '@/styles/themes.css';
+
+.theme-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background-color: var(--button-secondary-background);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+}
+
+.theme-toggle-button:hover {
+    background-color: var(--hover-background);
+}
+
+.theme-toggle-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.theme-toggle-text {
+    line-height: 1;
+}
+
+/* Modo claro/escuro */
+[data-theme="dark"] .theme-toggle-button {
+    color: var(--text-primary);
+}
+
+/* Suporte a idiomas */
+.language-pt .theme-toggle-text,
+.language-en .theme-toggle-text {
+    transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,119 @@
+@import '@/styles/themes.css';
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--stats-card-background);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: var(--hover-background);
+}
+
+.stats-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.stats-card-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0;
+}
+
+.stats-card-icon {
+    color: var(--text-secondary);
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.stats-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.stats-card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-card-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.stats-card-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.stats-card-trend-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.stats-card-trend-positive {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+.stats-card-trend-negative {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+}
+
+.stats-card-description {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+    margin-top: auto;
+}
+
+/* Estilos específicos para as redes sociais */
+.stats-card.instagram .stats-card-icon {
+    color: var(--instagram-color);
+}
+
+.stats-card.youtube .stats-card-icon {
+    color: var(--youtube-color);
+}
+
+.stats-card.linkedin .stats-card-icon {
+    color: var(--linkedin-color);
+}
+
+/* Transição suave para todos os elementos, conforme padrão do themes.css */
+.stats-card,
+.stats-card-header,
+.stats-card-title,
+.stats-card-icon,
+.stats-card-content,
+.stats-card-main,
+.stats-card-value,
+.stats-card-trend,
+.stats-card-trend-icon,
+.stats-card-description {
+    transition: background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+}

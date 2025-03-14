@@ -1,0 +1,256 @@
+@import '@/styles/themes.css';
+
+/* Estilos para a página Trust Leaderboard */
+.leaderboard-container {
+  padding: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.leaderboard-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.leaderboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.leaderboard-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Métricas Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  background-color: var(--hover-background);
+}
+
+.metric-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Tabela do Leaderboard */
+.leaderboard-table-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  /* Removido padding para tabela ocupar todo o espaço */
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.leaderboard-table th {
+  background-color: var(--report-table-header-bg);
+  font-weight: 600;
+  color: var(--report-table-header-text);
+  position: sticky;
+  top: 0;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: var(--report-table-row-hover);
+}
+
+/* Estilo do nome do influenciador */
+.influencer-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Badge de categoria */
+.category-badge {
+  background-color: var(--badge-background);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Trust Score Badge */
+.trust-score-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 3.5rem;
+}
+
+.trust-score-badge.high {
+  background-color: var(--trust-score-high-bg);
+  color: var(--trust-score-high-text);
+}
+
+.trust-score-badge.medium {
+  background-color: var(--trust-score-medium-bg);
+  color: var(--trust-score-medium-text);
+}
+
+.trust-score-badge.low {
+  background-color: var(--trust-score-low-bg);
+  color: var(--trust-score-low-text);
+}
+
+/* Ícones de tendência */
+.trend-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.trend-icon.up {
+  color: var(--success-text);
+}
+
+.trend-icon.down {
+  color: var(--error-text);
+}
+
+/* Contagem de seguidores */
+.followers-count {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Alegações verificadas */
+.verified-claims {
+  font-weight: 600;
+  color: var(--success-text);
+}
+
+/* Loading e Errors */
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: var(--error-text);
+  background-color: var(--error-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-container {
+    padding: 1rem;
+  }
+
+  .leaderboard-table-card {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .leaderboard-table {
+    min-width: 768px;
+    /* Garante que a tabela não seja comprimida demais */
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .trust-score-badge {
+    padding: 0.2rem 0.5rem;
+    min-width: 3rem;
+  }
+}
+
+/* Ajuste para temas - Importante para consistência quando o usuário muda de tema */
+[data-theme="dark"] .metric-card {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .leaderboard-table-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+  .leaderboard-title {
+    font-size: 1.5rem;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}

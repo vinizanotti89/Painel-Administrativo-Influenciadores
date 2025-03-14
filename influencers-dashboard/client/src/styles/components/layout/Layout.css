@@ -1,0 +1,58 @@
+@import '@/styles/themes.css';
+
+.layout {
+  min-height: 100vh;
+  background-color: var(--background-primary);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.layout-container {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  background-color: var(--background-primary);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--background-secondary);
+  padding: 1.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Ajuste específico para cartões e elementos de UI */
+.card,
+.table,
+.input,
+.select,
+.button {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+/* Ajustes para tabelas */
+.table th {
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+}
+
+.table td {
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Ajustes para inputs e formulários */
+.input,
+.select {
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}

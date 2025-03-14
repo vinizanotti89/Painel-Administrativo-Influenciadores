@@ -1,0 +1,210 @@
+@import '@/styles/themes.css';
+
+/* Container principal da tabela */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilo básico da tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.875rem;
+    background-color: var(--table-background);
+    color: var(--text-primary);
+}
+
+/* Cabeçalho da tabela */
+.table-header {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.table-head {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Células do corpo da tabela */
+.table-cell {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Estados de carregamento */
+.table-loading-row {
+    height: 200px;
+}
+
+.table-loading-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.table-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(59, 130, 246, 0.2);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.table-loading-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Estado de erro */
+.table-error-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 2rem;
+}
+
+.table-error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--error-text);
+}
+
+.table-error-icon {
+    width: 30px;
+    height: 30px;
+    stroke: var(--error-text);
+    margin-bottom: 1rem;
+}
+
+.table-error-retry-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.table-error-retry-button:hover {
+    background-color: var(--hover-background);
+    border-color: var(--primary-color);
+}
+
+/* Estado vazio */
+.table-empty-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 3rem 1rem;
+}
+
+.table-empty-message {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Linhas clicáveis */
+.table-row-clickable {
+    cursor: pointer;
+}
+
+.table-row-clickable:hover {
+    background-color: var(--hover-background);
+}
+
+/* Cabeçalho ordenável */
+.table-head-sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.table-head-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table-sort-icon {
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.table-head-sorted .table-sort-icon {
+    color: var(--primary-color);
+}
+
+/* Componente de paginação */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.table-pagination-button {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.table-pagination-button:hover:not(:disabled) {
+    background-color: var(--hover-background);
+    border-color: var(--primary-color);
+}
+
+.table-pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-pagination-info {
+    margin: 0 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Suporte para tema escuro */
+[data-theme="dark"] .table-loading-spinner {
+    border-color: rgba(96, 165, 250, 0.2);
+    border-top-color: var(--primary-color);
+}
+
+[data-theme="dark"] .table-pagination-button {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table-pagination-button:hover:not(:disabled) {
+    background-color: var(--hover-background);
+}

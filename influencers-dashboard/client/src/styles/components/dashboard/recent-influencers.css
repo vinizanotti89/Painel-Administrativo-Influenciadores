@@ -1,0 +1,283 @@
+@import '@/styles/themes.css';
+
+.recent-influencers-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.recent-influencers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.recent-influencers-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.recent-influencers-search {
+    max-width: 360px;
+    width: 100%;
+}
+
+/* Estado de carregamento */
+.recent-influencers-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+}
+
+.loading-spinner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estado de erro */
+.recent-influencers-error {
+    padding: 24px;
+    text-align: center;
+    color: var(--error-text);
+    background-color: var(--error-bg);
+}
+
+/* Container com rolagem para a tabela */
+.table-container {
+    overflow-x: auto;
+    max-height: 600px;
+}
+
+/* Estilos para a tabela de influenciadores */
+.influencers-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.influencers-table th {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+}
+
+.influencers-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.influencer-row:hover {
+    background-color: var(--hover-background);
+}
+
+/* Informações do influenciador */
+.influencer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.influencer-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--background-secondary);
+}
+
+.influencer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.influencer-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.influencer-handle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Badges de plataforma */
+.platform-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.platform-badge.instagram {
+    background-color: var(--instagram-color);
+    color: white;
+}
+
+.platform-badge.linkedin {
+    background-color: var(--linkedin-color);
+    color: white;
+}
+
+.platform-badge.youtube {
+    background-color: var(--youtube-color);
+    color: white;
+}
+
+/* Contador de seguidores */
+.followers-count {
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}
+
+/* Trust Score */
+.trust-score {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.trust-score.high {
+    background-color: var(--trust-score-high-bg);
+    color: var(--trust-score-high-text);
+}
+
+.trust-score.medium {
+    background-color: var(--trust-score-medium-bg);
+    color: var(--trust-score-medium-text);
+}
+
+.trust-score.low {
+    background-color: var(--trust-score-low-bg);
+    color: var(--trust-score-low-text);
+}
+
+/* Célula com quebra de linha */
+.cell-wrap {
+    max-width: 200px;
+    white-space: normal;
+}
+
+/* Container de categorias */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: var(--badge-background);
+    color: var(--text-secondary);
+}
+
+.no-categories {
+    color: var(--text-muted);
+}
+
+/* Coluna de ações */
+.actions-column {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.action-button.view {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.action-button.edit {
+    background-color: var(--button-secondary-background);
+    color: var(--text-secondary);
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* Estado vazio */
+.empty-state {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--text-muted);
+}
+
+/* Container para o link "Ver todos" */
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.view-all-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .recent-influencers-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recent-influencers-search {
+        max-width: 100%;
+    }
+
+    .table-container {
+        margin: 0 -16px;
+    }
+
+    .actions-column {
+        flex-direction: column;
+    }
+}

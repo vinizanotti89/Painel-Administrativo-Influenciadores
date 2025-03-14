@@ -1,0 +1,61 @@
+@import '@/styles/themes.css';
+
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  background-color: var(--input-background);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb, 59, 130, 246), 0.2);
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.input-error {
+  border-color: var(--error-text);
+}
+
+.error-message {
+  color: var(--error-text);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.required-mark {
+  color: var(--error-text);
+  margin-left: 0.25rem;
+}
+
+.input-field:disabled {
+  background-color: var(--background-secondary);
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Suporte para modo escuro */
+[data-theme="dark"] .input-field {
+  background-color: var(--input-background);
+  color: var(--text-primary);
+}

@@ -1,0 +1,42 @@
+@import '@/styles/themes.css';
+
+.header {
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+  height: 64px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header-title h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos específicos para tema escuro */
+[data-theme="dark"] .header {
+  background-color: var(--background-secondary);
+}

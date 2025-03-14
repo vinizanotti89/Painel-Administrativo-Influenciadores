@@ -1,0 +1,123 @@
+@import '@/styles/themes.css';
+
+.instagram-auth-container {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.instagram-auth-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.instagram-auth-pending {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.instagram-auth-spinner {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--instagram-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.instagram-auth-success-alert {
+    background-color: var(--success-bg);
+    border-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+.instagram-auth-success-icon {
+    color: var(--success-text);
+}
+
+.instagram-auth-success-message {
+    color: var(--success-text);
+}
+
+.instagram-auth-data-container {
+    background-color: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.instagram-auth-data-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.instagram-auth-data-content {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    color: var(--text-primary);
+}
+
+.instagram-auth-permissions {
+    background-color: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.instagram-auth-permissions-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.instagram-auth-permissions-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.instagram-auth-permissions-list li {
+    margin-bottom: 0.25rem;
+}
+
+.instagram-auth-error {
+    background-color: var(--error-bg);
+    border-color: var(--error-bg);
+}
+
+.instagram-auth-error-icon {
+    color: var(--error-text);
+}
+
+.instagram-auth-error-message {
+    color: var(--error-text);
+}
+
+/* Transições para tema claro/escuro */
+.instagram-auth-container * {
+    transition: background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+}

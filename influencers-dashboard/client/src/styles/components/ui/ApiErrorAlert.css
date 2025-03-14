@@ -1,0 +1,103 @@
+@import '@/styles/themes.css';
+
+.api-error-alert {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+/* Variantes baseadas na plataforma */
+.api-error-instagram {
+    border-left: 4px solid var(--instagram-color);
+    background-color: rgba(var(--instagram-color-rgb), 0.1);
+}
+
+.api-error-youtube {
+    border-left: 4px solid var(--youtube-color);
+    background-color: rgba(var(--youtube-color-rgb), 0.1);
+}
+
+.api-error-linkedin {
+    border-left: 4px solid var(--linkedin-color);
+    background-color: rgba(var(--linkedin-color-rgb), 0.1);
+}
+
+.api-error-default {
+    border-left: 4px solid var(--error-text);
+    background-color: var(--error-bg);
+}
+
+/* Conteúdo do alerta */
+.api-error-content {
+    display: flex;
+    align-items: center;
+}
+
+.api-error-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--error-text);
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.api-error-text {
+    flex: 1;
+}
+
+.api-error-title {
+    font-weight: 600;
+    color: var(--error-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.api-error-message {
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+}
+
+.api-error-connection {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.api-error-platform {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+}
+
+/* Botão de fechar */
+.api-error-close {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.api-error-close:hover {
+    color: var(--text-primary);
+}
+
+.api-error-close:focus {
+    outline: none;
+}
+
+.api-error-close-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Modo escuro */
+[data-theme="dark"] .api-error-title {
+    color: var(--error-text);
+}
+
+[data-theme="dark"] .api-error-platform {
+    color: var(--text-secondary);
+}

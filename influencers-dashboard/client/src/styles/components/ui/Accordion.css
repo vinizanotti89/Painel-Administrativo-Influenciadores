@@ -1,0 +1,87 @@
+@import '@/styles/themes.css';
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--primary-color);
+}
+
+.accordion-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--primary-color);
+  border-radius: 0.25rem;
+}
+
+.accordion-trigger-minimal {
+  padding: 0.75rem 0;
+  font-weight: 400;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  color: var(--text-muted);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordion-trigger[data-state='open'] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+}
+
+.accordion-content-inner {
+  padding: 0.5rem 0 1rem;
+  color: var(--text-secondary);
+}
+
+.accordion-content[data-state='open'] {
+  animation: slideDown 200ms ease-out;
+}
+
+.accordion-content[data-state='closed'] {
+  animation: slideUp 200ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}

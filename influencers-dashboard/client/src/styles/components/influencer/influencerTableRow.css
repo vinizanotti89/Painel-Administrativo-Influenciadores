@@ -1,0 +1,116 @@
+@import '@/styles/themes.css';
+
+/* Linha da tabela */
+.influencer-table-row {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.influencer-table-row:hover {
+    background-color: var(--report-table-row-hover);
+}
+
+/* Células da tabela */
+.influencer-table-row td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--report-table-row-border);
+    vertical-align: middle;
+}
+
+/* Estilo para informações do médico */
+.influencer-doctor-info {
+    display: flex;
+    align-items: center;
+}
+
+.influencer-doctor-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Estilo para pontuação */
+.influencer-score-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.influencer-score-badge.high {
+    background-color: var(--trust-score-high-bg);
+    color: var(--trust-score-high-text);
+}
+
+.influencer-score-badge.medium {
+    background-color: var(--trust-score-medium-bg);
+    color: var(--trust-score-medium-text);
+}
+
+.influencer-score-badge.low {
+    background-color: var(--trust-score-low-bg);
+    color: var(--trust-score-low-text);
+}
+
+/* Estilo para o histórico de fake news */
+.influencer-history-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.influencer-history-badge.has-fake-news {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+}
+
+.influencer-history-badge.no-fake-news {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+/* Estilo para botões de ação */
+.influencer-actions-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.influencer-view-details-button,
+.influencer-edit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.influencer-view-details-button:hover,
+.influencer-edit-button:hover {
+    background-color: var(--hover-background);
+}
+
+/* Estilo para células específicas */
+.influencer-platform-cell {
+    font-weight: 500;
+}
+
+.influencer-followers-cell {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .influencer-actions-cell {
+        flex-direction: column;
+    }
+
+    .influencer-view-details-button,
+    .influencer-edit-button {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+}

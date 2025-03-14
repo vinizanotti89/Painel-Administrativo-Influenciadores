@@ -1,0 +1,64 @@
+.error-boundary-container {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.error-boundary-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--error-text);
+}
+
+.error-boundary-alert {
+    margin-bottom: 1.5rem;
+}
+
+.error-boundary-message {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.error-boundary-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.error-boundary-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.error-boundary-button.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.error-boundary-button.primary-button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(0.9);
+}
+
+.error-boundary-button.primary-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.error-boundary-button.secondary-button {
+    background-color: var(--button-secondary-background);
+    color: var(--text-primary);
+}
+
+.error-boundary-button.secondary-button:hover {
+    background-color: var(--hover-background);
+}
+
+.error-boundary-button.secondary-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(209, 213, 219, 0.5);
+}

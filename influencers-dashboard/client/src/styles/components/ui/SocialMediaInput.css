@@ -1,0 +1,135 @@
+@import '@/styles/themes.css';
+
+/* Contêiner principal */
+.social-input-container {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* Container do input com ícone e prefixo */
+.social-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    padding: 0.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.social-input-wrapper:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb, 59, 130, 246), 0.2);
+}
+
+/* Estilos específicos por plataforma */
+.social-input-instagram {
+    border-left: 3px solid var(--instagram-color);
+}
+
+.social-input-youtube {
+    border-left: 3px solid var(--youtube-color);
+}
+
+.social-input-linkedin {
+    border-left: 3px solid var(--linkedin-color);
+}
+
+/* Ícone da rede social */
+.social-input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+.social-input-instagram .social-input-icon {
+    color: var(--instagram-color);
+}
+
+.social-input-youtube .social-input-icon {
+    color: var(--youtube-color);
+}
+
+.social-input-linkedin .social-input-icon {
+    color: var(--linkedin-color);
+}
+
+/* Prefixo da rede social (@, etc) */
+.social-input-prefix {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-right: 0.25rem;
+}
+
+/* Campo de input */
+.social-input-field {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--text-primary);
+}
+
+.social-input-field::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+/* Estado de erro */
+.social-input-error {
+    border-color: var(--error-text);
+}
+
+.error-message {
+    color: var(--error-text);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Dica/Hint */
+.social-input-hint {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Estado de carregamento */
+.social-input-loading {
+    opacity: 0.7;
+}
+
+.social-input-loading-indicator {
+    position: absolute;
+    right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(var(--primary-color-rgb, 59, 130, 246), 0.3);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Label */
+.input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.required-mark {
+    color: var(--error-text);
+    margin-left: 0.25rem;
+}

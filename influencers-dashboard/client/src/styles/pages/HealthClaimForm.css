@@ -1,0 +1,149 @@
+@import '@/styles/themes.css';
+
+.health-claim-form {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.form-container {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.form-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.2s ease-in-out;
+}
+
+.form-content {
+  padding: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease-in-out;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.error-alert {
+  margin-bottom: 1.5rem;
+  border-color: var(--error-text);
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.evidence-link-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.evidence-link-input {
+  flex: 1;
+}
+
+.add-link-btn {
+  margin-top: 0.75rem;
+}
+
+.remove-link-btn {
+  color: var(--text-secondary);
+  transition: color 0.2s ease-in-out;
+}
+
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease-in-out;
+}
+
+/* Status badges styling */
+.status-badge {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.status-badge.verified_true {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status-badge.verified_false {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.status-badge.verified_partially,
+.status-badge.verified_misleading {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.status-badge.unverified,
+.status-badge.verified_inconclusive {
+  background-color: var(--badge-background);
+  color: var(--text-muted);
+}
+
+/* Form control focus states */
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}

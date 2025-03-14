@@ -1,0 +1,66 @@
+@import '@/styles/themes.css';
+
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.table-pagination-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.table-pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.table-pagination-button {
+    padding: 0.25rem 0.625rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.table-pagination-button:hover:not(:disabled):not(.table-pagination-button-disabled) {
+    background-color: var(--hover-background);
+    border-color: var(--primary-color);
+}
+
+.table-pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-pagination-button-active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.table-pagination-button-disabled {
+    cursor: default;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Suporte a tema escuro */
+[data-theme="dark"] .table-pagination-button {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table-pagination-button-active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

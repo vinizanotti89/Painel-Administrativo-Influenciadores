@@ -1,0 +1,334 @@
+:root {
+  /* Variáveis de cores base */
+  --background-primary: #ffffff;
+  --background-secondary: #f9fafb;
+  --card-background: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --primary-color: #3b82f6;
+  --hover-background: #f3f4f6;
+
+  /* Cores das redes sociais */
+  --instagram-color: #E1306C;
+  --instagram-dark: #C13584;
+  --instagram-light: #F56040;
+  --linkedin-color: #0077B5;
+  --linkedin-dark: #0066A1;
+  --linkedin-light: #0A85C9;
+  --youtube-color: #FF0000;
+  --youtube-dark: #CC0000;
+  --youtube-light: #FF3333;
+
+  /* Cores para gráficos */
+  --chart-color-1: hsl(210, 100%, 50%);
+  --chart-color-2: hsl(30, 100%, 50%);
+  --chart-color-3: hsl(120, 70%, 50%);
+  --chart-color-4: hsl(300, 70%, 50%);
+  --chart-color-5: hsl(180, 70%, 50%);
+
+  /* Componentes específicos */
+  --input-background: #ffffff;
+  --table-background: #ffffff;
+  --stats-card-background: #ffffff;
+  --badge-background: #f3f4f6;
+  --button-secondary-background: #f3f4f6;
+
+  /* Componentes de autenticação */
+  --auth-card-background: #ffffff;
+  --auth-input-background: #ffffff;
+  --auth-border: #e5e7eb;
+  --auth-button-text: #ffffff;
+  --auth-instagram-bg: var(--instagram-color);
+  --auth-instagram-hover: var(--instagram-dark);
+  --auth-linkedin-bg: var(--linkedin-color);
+  --auth-linkedin-hover: var(--linkedin-dark);
+  --auth-youtube-bg: var(--youtube-color);
+  --auth-youtube-hover: var(--youtube-dark);
+  --auth-connect-success: var(--success-bg);
+  --auth-connect-success-text: var(--success-text);
+  --auth-connect-error: var(--error-bg);
+  --auth-connect-error-text: var(--error-text);
+
+  /* Estados - light theme */
+  --success-bg: rgba(22, 163, 74, 0.1);
+  --success-text: #16a34a;
+  --warning-bg: rgba(217, 119, 6, 0.1);
+  --warning-text: #d97706;
+  --error-bg: rgba(220, 38, 38, 0.1);
+  --error-text: #dc2626;
+
+  /* Relatórios */
+  --report-card-background: var(--card-background);
+  --report-form-background: var(--background-secondary);
+  --report-summary-background: var(--background-secondary);
+  --report-border: var(--border-color);
+  --report-hover: var(--hover-background);
+
+  /* Status de relatórios */
+  --report-status-completed: var(--success-bg);
+  --report-status-completed-text: var(--success-text);
+  --report-status-pending: var(--warning-bg);
+  --report-status-pending-text: var(--warning-text);
+
+  /* Trust Score */
+  --trust-score-high-bg: var(--success-bg);
+  --trust-score-high-text: var(--success-text);
+  --trust-score-medium-bg: var(--warning-bg);
+  --trust-score-medium-text: var(--warning-text);
+  --trust-score-low-bg: var(--error-bg);
+  --trust-score-low-text: var(--error-text);
+
+  /* Tabela de relatórios */
+  --report-table-header-bg: var(--background-secondary);
+  --report-table-header-text: var(--text-secondary);
+  --report-table-row-border: var(--border-color);
+  --report-table-row-hover: var(--hover-background);
+
+  /* Badges para relatórios */
+  --report-badge-bg: var(--badge-background);
+  --report-badge-text: var(--text-secondary);
+
+  /* Research */
+  --research-card-background: var(--card-background);
+  --research-input-background: var(--input-background);
+  --research-border: var(--border-color);
+  --research-hover: var(--hover-background);
+  --research-badge-text: var(--text-secondary);
+  --research-badge-bg: var(--badge-background);
+
+  /* Claims */
+  --claim-card-bg: var(--card-background);
+  --claim-header-bg: var(--background-secondary);
+  --claim-border: var(--border-color);
+  --claim-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Variáveis de cores base */
+  --background-primary: #111827;
+  --background-secondary: #1f2937;
+  --card-background: #1f2937;
+  --text-primary: #f3f4f6;
+  /* Corrigido para melhor contraste */
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-color: #374151;
+  /* Corrigido para ser menos contrastante */
+  --primary-color: #60a5fa;
+  --hover-background: #2d3748;
+
+  /* Cores das redes sociais - ajustadas para o tema escuro */
+  --instagram-color: #E1306C;
+  --instagram-dark: #C13584;
+  --instagram-light: #F77737;
+  --linkedin-color: #0077B5;
+  --linkedin-dark: #0066A1;
+  --linkedin-light: #0A85C9;
+  --youtube-color: #FF0000;
+  --youtube-dark: #CC0000;
+  --youtube-light: #FF3333;
+
+  /* Cores para gráficos */
+  --chart-color-1: hsl(210, 100%, 60%);
+  --chart-color-2: hsl(30, 100%, 60%);
+  --chart-color-3: hsl(120, 70%, 60%);
+  --chart-color-4: hsl(300, 70%, 60%);
+  --chart-color-5: hsl(180, 70%, 60%);
+
+  /* Componentes específicos */
+  --input-background: #1f2937;
+  --table-background: #1f2937;
+  --stats-card-background: #1f2937;
+  --badge-background: #374151;
+  --button-secondary-background: #1f2937;
+
+  /* Componentes de autenticação para tema escuro */
+  --auth-card-background: #1f2937;
+  --auth-input-background: #374151;
+  --auth-border: #374151;
+  --auth-button-text: #ffffff;
+  --auth-instagram-bg: var(--instagram-color);
+  --auth-instagram-hover: var(--instagram-dark);
+  --auth-linkedin-bg: var(--linkedin-color);
+  --auth-linkedin-hover: var(--linkedin-dark);
+  --auth-youtube-bg: var(--youtube-color);
+  --auth-youtube-hover: var(--youtube-dark);
+  --auth-connect-success: rgba(22, 163, 74, 0.2);
+  --auth-connect-success-text: #4ade80;
+  --auth-connect-error: rgba(220, 38, 38, 0.2);
+  --auth-connect-error-text: #f87171;
+
+  /* Estados - dark theme */
+  --success-bg: rgba(22, 163, 74, 0.2);
+  --success-text: #4ade80;
+  --warning-bg: rgba(217, 119, 6, 0.2);
+  --warning-text: #fbbf24;
+  --error-bg: rgba(220, 38, 38, 0.2);
+  --error-text: #f87171;
+
+  /* Research */
+  --research-card-background: var(--card-background);
+  --research-input-background: #374151;
+  --research-border: #374151;
+  --research-hover: var(--hover-background);
+  --research-badge-text: var(--text-secondary);
+  --research-badge-bg: var(--badge-background);
+
+  /* Claims */
+  --claim-card-bg: var(--card-background);
+  --claim-header-bg: var(--background-secondary);
+  --claim-border: var(--border-color);
+  --claim-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Trust Score - definições específicas para tema escuro */
+  --trust-score-high-bg: var(--success-bg);
+  --trust-score-high-text: var(--success-text);
+  --trust-score-medium-bg: var(--warning-bg);
+  --trust-score-medium-text: var(--warning-text);
+  --trust-score-low-bg: var(--error-bg);
+  --trust-score-low-text: var(--error-text);
+}
+
+/* Aplicação específica para elementos da pesquisa */
+.research-container {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.research-card {
+  background-color: var(--research-card-background);
+  border-color: var(--research-border);
+}
+
+.research-input {
+  background-color: var(--research-input-background);
+  color: var(--text-primary);
+  border-color: var(--research-border);
+}
+
+.research-badge {
+  background-color: var(--research-badge-bg);
+  color: var(--research-badge-text);
+}
+
+/* Aplicação específica para elementos de relatórios */
+.report-card {
+  background-color: var(--report-card-background);
+  border-color: var(--report-border);
+}
+
+.report-summary {
+  background-color: var(--report-summary-background);
+}
+
+.trust-score.high {
+  background-color: var(--trust-score-high-bg);
+  color: var(--trust-score-high-text);
+}
+
+.trust-score.medium {
+  background-color: var(--trust-score-medium-bg);
+  color: var(--trust-score-medium-text);
+}
+
+.trust-score.low {
+  background-color: var(--trust-score-low-bg);
+  color: var(--trust-score-low-text);
+}
+
+.reports-table th {
+  background-color: var(--report-table-header-bg);
+  color: var(--report-table-header-text);
+  border-color: var(--report-table-row-border);
+}
+
+.reports-table td {
+  border-color: var(--report-table-row-border);
+}
+
+.table-row:hover {
+  background-color: var(--report-table-row-hover);
+}
+
+.status-badge.success {
+  background-color: var(--report-status-completed);
+  color: var(--report-status-completed-text);
+}
+
+.status-badge.pending {
+  background-color: var(--report-status-pending);
+  color: var(--report-status-pending-text);
+}
+
+/* Aplicação específica para componentes de autenticação de redes sociais */
+.auth-card {
+  background-color: var(--auth-card-background);
+  border-color: var(--auth-border);
+  color: var(--text-primary);
+}
+
+.auth-input {
+  background-color: var(--auth-input-background);
+  border-color: var(--auth-border);
+  color: var(--text-primary);
+}
+
+.auth-button {
+  color: var(--auth-button-text);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.auth-button.instagram {
+  background-color: var(--auth-instagram-bg);
+}
+
+.auth-button.instagram:hover {
+  background-color: var(--auth-instagram-hover);
+}
+
+.auth-button.linkedin {
+  background-color: var(--auth-linkedin-bg);
+}
+
+.auth-button.linkedin:hover {
+  background-color: var(--auth-linkedin-hover);
+}
+
+.auth-button.youtube {
+  background-color: var(--auth-youtube-bg);
+}
+
+.auth-button.youtube:hover {
+  background-color: var(--auth-youtube-hover);
+}
+
+.auth-connection-status.success {
+  background-color: var(--auth-connect-success);
+  color: var(--auth-connect-success-text);
+}
+
+.auth-connection-status.error {
+  background-color: var(--auth-connect-error);
+  color: var(--auth-connect-error-text);
+}
+
+/* Transições suaves para todos os elementos */
+.research-container *,
+.research-card,
+.research-input,
+.research-badge,
+.report-card,
+.report-summary,
+.trust-score,
+.reports-table,
+.status-badge,
+.auth-card,
+.auth-input,
+.auth-button,
+.auth-connection-status {
+  transition: background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}

@@ -1,0 +1,65 @@
+@import '@/styles/themes.css';
+@import './components/auth/AuthCallback.css';
+@import './components/dashboard/stats-card.css';
+@import './components/dashboard/recent-influencers.css';
+@import './components/instagram/InstagramAuthTest.css';
+@import './components/linkedin/LinkedinAuthTest.css';
+@import './components/youtube/YouTubeAuthTest.css';
+@import './components/ui/Accordion.css';
+@import './components/ui/Alert.css';
+@import './components/ui/Badge.css';
+@import './components/ui/Button.css';
+@import './components/ui/Card.css';
+@import './components/ui/EnhancedInput.css';
+@import './components/ui/EnhancedTable.css';
+@import './components/ui/InfluencerCard.css';
+@import './components/ui/Input.css';
+@import './components/ui/Label.css';
+@import './components/ui/SearchBar.css';
+@import './components/ui/Select.css';
+@import './components/ui/SocialMediaInput.css';
+@import './components/ui/switch.css';
+@import './components/ui/Table.css';
+@import './components/ui/TablePagination.css';
+@import './components/ui/Tabs.css';
+@import './components/ui/Textarea.css';
+@import './layout/Header.css';
+@import './layout/Layout.css';
+@import './layout/MainContent.css';
+@import './layout/Sidebar.css';
+@import './pages/Analytics.css';
+@import './pages/ClaimDetails.css';
+@import './pages/Dashboard.css';
+@import './pages/HealthClaimForm.css';
+@import './pages/HealthClaims.css';
+@import './pages/InfluencerDetails.css';
+@import './pages/InfluencerList.css';
+@import './pages/InfluencerSearchComponent.css';
+@import './pages/Reports.css';
+@import './pages/SearchInfluencer.css';
+@import './pages/SearchPage.css';
+@import './pages/Settings.css';
+@import './pages/TrustLeaderboard.css';
+
+
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+}
+
+/* Utility Classes */
+.icon {
+  width: 1rem;
+  height: 1rem;
+}

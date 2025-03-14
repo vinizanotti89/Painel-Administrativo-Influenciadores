@@ -1,0 +1,84 @@
+@import '@/styles/themes.css';
+
+/* Container da tabela */
+.influencer-table-container {
+    background-color: var(--table-background);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Estilo para a tabela */
+.influencer-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Cabeçalho da tabela */
+.influencer-table thead tr {
+    background-color: var(--report-table-header-bg);
+}
+
+.influencer-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--report-table-header-text);
+    border-bottom: 1px solid var(--report-table-row-border);
+}
+
+/* Estado vazio da tabela */
+.influencer-table-empty {
+    background-color: var(--card-background);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.influencer-table-no-data {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Estado de carregamento */
+.influencer-table .skeleton {
+    background-color: var(--hover-background);
+    border-radius: 0.25rem;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.skeleton {
+    background-color: var(--hover-background);
+    border-radius: 0.25rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .influencer-table-container {
+        overflow-x: auto;
+    }
+
+    .influencer-table th,
+    .influencer-table td {
+        padding: 0.5rem;
+    }
+}

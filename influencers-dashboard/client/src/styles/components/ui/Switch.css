@@ -1,0 +1,51 @@
+@import '@/styles/themes.css';
+
+/* Estilos para o componente Switch */
+.switch-root {
+  --switch-width: 44px;
+  --switch-height: 24px;
+  --switch-thumb-size: 20px;
+  position: relative;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background-color: var(--background-secondary);
+  border-radius: 999px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.switch-root[data-state="checked"] {
+  background-color: var(--primary-color);
+}
+
+.switch-thumb {
+  display: block;
+  width: var(--switch-thumb-size);
+  height: var(--switch-thumb-size);
+  background-color: var(--card-background);
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  transform: translateX(2px);
+}
+
+.switch-root[data-state="checked"] .switch-thumb {
+  transform: translateX(calc(var(--switch-width) - var(--switch-thumb-size) - 2px));
+}
+
+/* Estilos para o estado de foco */
+.switch-root:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Estilos para o estado desabilitado */
+.switch-root[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Suporte para tema escuro - box-shadow */
+[data-theme="dark"] .switch-thumb {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,53 @@
+@import '@/styles/themes.css';
+
+/* Base */
+.alert {
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+/* Variantes - Tema claro */
+.alert-default {
+  background-color: var(--badge-background);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.alert-destructive {
+  background-color: var(--error-bg);
+  border-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.alert-success {
+  background-color: var(--success-bg);
+  border-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.alert-warning {
+  background-color: var(--warning-bg);
+  border-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+/* Título */
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+/* Descrição */
+.alert-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.9;
+}
