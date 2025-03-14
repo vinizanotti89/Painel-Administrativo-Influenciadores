@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import useAsyncState from './useAsyncState';
 import { errorService } from '@/lib/errorMessages';
 import useTranslation from '@/hooks/useTranslation';
-import { toast } from '@/components/ui/toast'; // Ajuste o caminho conforme seu projeto
+import { toast } from '@/components/ui/Toast'; // Ajuste o caminho conforme seu projeto
 
 /**
  * Hook personalizado para chamadas de API com tratamento de erros e notificações
