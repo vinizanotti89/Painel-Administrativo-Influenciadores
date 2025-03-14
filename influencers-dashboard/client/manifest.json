@@ -1,0 +1,10 @@
+{
+    "name": "Influencers Dashboard",
+    "short_name": "Influencers",
+    "description": "Sistema de verificação e análise de alegações de saúde feitas por influenciadores",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": []
+}
