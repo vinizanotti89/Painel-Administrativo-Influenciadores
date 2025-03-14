@@ -3,7 +3,7 @@ import { Card, CardHeader, CardContent, CardTitle } from './card';
 import { Badge } from './badge';
 import { formatNumber, formatCurrency, truncateText } from '@/lib/utils';
 import { normalizeApiError, ASYNC_OPERATIONS } from '@/lib/errorMessages';
-import '@/styles/components/influencer/InfluencerCard.css';
+import '@/styles/components/ui/InfluencerCard.css';
 
 /**
  * Componente para exibir dados de um influenciador com suporte para 

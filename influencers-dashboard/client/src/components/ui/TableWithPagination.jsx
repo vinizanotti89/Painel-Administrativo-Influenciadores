@@ -4,6 +4,7 @@ import TablePagination from "./TablePagination";
 import { errorService } from "@/lib/errorMessages";
 import useAsyncState from '@/hooks/useAsyncState';
 import useTranslation from '@/hooks/useTranslation';
+import '@/styles/components/ui/TablePagination.scss';
 
 /**
  * Componente de tabela com paginação que integra o gerenciamento de

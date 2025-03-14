@@ -1,5 +1,5 @@
 import * as React from "react";
-import '@/styles/components/ui/alert.css';
+import '@/styles/components/ui/Alert.css';
 
 /**
  * Componente de alerta para exibir mensagens importantes ao usuário
