@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useInfluencer } from '@/contexts/InfluencerContext';
 import useAsyncState from '@/hooks/useAsyncState';
 import useTranslation from '@/hooks/useTranslation';
-import { useToast } from '@/components/ui/toast';
+import { useToast } from '@/components/ui/Toast';
 import { Card } from '@/components/ui/card';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
