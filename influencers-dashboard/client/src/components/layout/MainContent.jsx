@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchBar } from "@/components/ui/SearchBar";
-import '@/styles/components/layout/mainContent.css';
+import '@/styles/components/layout/MainContent.css';
 
 const MainContent = React.forwardRef(({
   children,
